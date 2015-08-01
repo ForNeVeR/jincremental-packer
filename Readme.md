@@ -7,7 +7,7 @@ Setup
 1. Prepare Jenkins job that will build your software and archive every build to a single artifact - a ZIP archive.
 2. Create another job that will create incremental updates. This job must simply execute the following in the separate directory:
 
-       ./Prepare-Release.ps1 http://server:8080/jenkins master_job_name
+        ./Prepare-Release.ps1 http://server:8080/jenkins master_job_name
 
    Third optional parameter is the latest stable build number (for the cases when you want to diff not with previous version, but with some another).
 3. Setup Jenkins to archive the `*.zip` artifact from the job output.
