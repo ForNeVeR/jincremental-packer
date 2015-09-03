@@ -8,8 +8,7 @@ $OldVersion = $OldVersion.TrimEnd('\')
 $NewVersion = $NewVersion.TrimEnd('\')
 
 function FileFilter($file) {
-    -not (($file.Name -in @('Deletes.txt', 'Uploads.txt'))
-      -or ($file.FullName.Split('/\') -contains 'App_Data'))
+    -not (($file.Name -in @('Deletes.txt', 'Uploads.txt')) -or ($file.FullName.Split('/\') -contains 'App_Data'))
 }
 
 $oldVersionFiles = Get-ChildItem $OldVersion -Recurse | ? { -not $_.PSIsContainer -and (FileFilter($_)) }
