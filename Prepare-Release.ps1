@@ -2,7 +2,7 @@ param ($ServerUrl, $JobName, $PreviousBuildNumber = $null)
 
 $ErrorActionPreference = 'Stop'
 
-$version = '0.0.1'
+$version = '0.0.2'
 Write-Output "jincremental-packer v. $version"
 
 Remove-Item ".\*_incremental.zip"
